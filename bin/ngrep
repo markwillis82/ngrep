@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+
+var grepCmd = require("../lib/grep");
+var clc = require('cli-color');
+
+var error = clc.red.bold;
+var warn = clc.yellow;
+var notice = clc.blue;
+
+var userArgs = process.argv;
+
+
+if(userArgs.length <= 3) {
+	console.log("Usage: ngrep <pattern> <file> <file> ... ");
+	process.exit(1);
+}
+
+//shift of arguements
+
+userArgs.shift();
+userArgs.shift();
+
+// get pattern
+var regPattern = userArgs.shift();
+// rest of array is a file list
+
+
+// run command
+grepCmd.grep(regPattern, userArgs, function(err, results) {
+	if(err) {
+		console.log(err);
+	}
+	if(results) {
+		results.forEach(function(lineObj) {
+			console.log(warn(lineObj.file) + ":" + lineObj.lineNumber + "\t"+lineObj.line);
+		})
+	}
+});
