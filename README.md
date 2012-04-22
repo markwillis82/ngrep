@@ -4,12 +4,12 @@ Useful node bindings to allow for multiple files to be "greped" simultaneously.
 
 ##Install
 
-    npm install ngrep
+    npm install nodegrep
 
 
 ##Usage
 
-    ngrep <pattern> <file> <file> ...
+    nodegrep <pattern> <file> <file> ...
 
-    ngrep command package.json
+    nodegrep command package.json
     package.json:4	  "description": "async grep command",

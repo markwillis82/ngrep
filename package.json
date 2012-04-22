@@ -1,6 +1,6 @@
 {
   "author": "Mark Willis <mark.w@immat.co.uk>",
-  "name": "ngrep",
+  "name": "nodegrep",
   "description": "async grep command",
   "version": "0.1.0",
   "repository": {
@@ -8,12 +8,13 @@
     "url": "git://github.com/markwillis82/ngrep.git"
   },
   "bin":{
-    "ngrep": "./bin/ngrep"
+    "nodegrep": "./bin/nodegrep"
   },
   "keywords": [
     "grep",
     "ngrep",
-    "find"
+    "find",
+    "nodegrep"
   ],
   "engines": {
     "node": "~0.6.6"
