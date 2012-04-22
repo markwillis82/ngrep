@@ -2,11 +2,19 @@
   "author": "Mark Willis <mark.w@immat.co.uk>",
   "name": "ngrep",
   "description": "async grep command",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/markwillis82/ngrep.git"
   },
+  "bin":{
+    "ngrep": "./bin/ngrep"
+  },
+  "keywords": [
+    "grep",
+    "ngrep",
+    "find"
+  ],
   "engines": {
     "node": "~0.6.6"
   },
@@ -15,5 +23,6 @@
     "async": "*",
     "cli-color": "*"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "licence": "MIT"
 }
